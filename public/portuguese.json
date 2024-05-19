@@ -1,0 +1,202 @@
+[
+    {
+      "name": "boi",
+      "description": "Derrame sua força na forma de sua Arte em seus socos, seus chutes, no avanço constante de sua agressão."
+    },
+    {
+      "name": "caranguejo",
+      "description": "Mova-se com os movimentos do seu oponente, como se você fosse a maré incessante. Quando o momento for oportuno, ele será vítima de seu ataque."
+    },
+    {
+      "name": "cavalo",
+      "description": "Perca-se no ritmo de sua Arte. Às vezes seja rápido e decisivo, em outras vezes medido e provocador."
+    },
+    {
+      "name": "cobra",
+      "description": "Ataque violentamente quando seus oponentes não estiverem esperando ... mostre lazer no início, então ataque vigorosamente de repente."
+    },
+    {
+      "name": "coelho",
+      "description": "Esteja perto de seu oponente, cegando-o com sua velocidade. A arte do Coelho é a Arte da velocidade."
+    },
+    {
+      "name": "dragão",
+      "description": "Seja rápido como o trovão que ruge antes que você tenha chance de cobrir seus ouvidos, rápido como o raio que brilha antes que você possa piscar seus olhos."
+    },
+    {
+      "name": "elefante",
+      "description": "Somente os fortes podem seguir sua Arte. É por isso que é a verdadeira Arte, a Arte que não pode ser parada."
+    },
+    {
+      "name": "enguia",
+      "description": "Se seu oponente atacar com fogo, contra-ataque com água, tornando-se completamente fluido e livre."
+    },
+    {
+      "name": "galo",
+      "description": "Não permita que seu inimigo descanse, mas concentre sua Arte para entregar golpes rápidos e afiados sempre que ele estiver atrasado."
+    },
+    {
+      "name": "ganso",
+      "description": "Suas vestes são seu manto de penas; espalhe suas asas para esconder suas intenções. Mesmo assim, enquanto seu oponente procura determinar seu motivo, você irá atacar."
+    },
+    {
+      "name": "grua",
+      "description": "Não faça nenhum movimento desnecessário, conservando sua força até que seja a hora certa para atacar. A verdadeira arte é uma sinfonia de golpes graciosos."
+    },
+    {
+      "name": "javali",
+      "description": "Observe a oportunidade, pois ela se apresentará. Então ataque, concentrando toda a sua força em um único ataque, pisoteando a Arte de seu oponente sob a sua."
+    },
+    {
+      "name": "louva-a-deus",
+      "description": "Seu oponente vê, mas não entende. Distraia o vigilante, engane o cauteloso. Esta é a arte do Louva-a-deus, a Arte do ataque enganoso."
+    },
+    {
+      "name": "macaco",
+      "description": "Sem engano, você não pode executar uma estratégia, sem estratégia você não pode controlar o oponente."
+    },
+    {
+      "name": "sapo",
+      "description": "Não deixe de aprender com a voz pura de um riacho de montanha que flui constantemente, espirrando sobre as rochas. Emule seu fluxo, imite seu poder."
+    },
+    {
+      "name": "tigre",
+      "description": "O poder de sua Arte se projeta como uma sombra. Sinta o medo de seu oponente e avance com certeza e força."
+    },
+    {
+      "name": "cão",
+      "description": "Negue a seu oponente sua Arte. Depois de bloquear seu ataque, não o deixe ir, mas, em vez disso, impeça incessantemente seu ímpeto."
+    },
+    {
+      "name": "rato",
+      "description": "Todos os oponentes têm um buraco em sua Arte, uma abertura de fraqueza. A Arte do Rato é encontrar essa abertura, entrar nela e atacar."
+    },
+    {
+      "name": "fênix",
+      "description": "Nenhum oponente espera o que ele acredita que não está lá. Aproveite as sombras, dobre o sol, ataque como o vento - de um lugar invisível."
+    },
+    {
+      "name": "girafa",
+      "description": "Projete seu poder, saltando sobre oponentes que se acreditam seguros fora de alcance. A agressão é subordinada à surpresa."
+    },
+    {
+      "name": "tanuki",
+      "description": "A Arte do Tanuki é a arte da oportunidade. A paciência abrirá a porta para o ângulo perfeito de seu ataque."
+    },
+    {
+      "name": "iguana",
+      "description": "Enquanto seu oponente se desgasta com movimentos desnecessários, você reunirá sua força. Uma varredura devastadora de um soco fatal é o ápice da Arte."
+    },
+    {
+      "name": "kirin",
+      "description": "Há Arte na graça, Arte na discrição, Arte em sentir a verdade. Rasgue o véu da sombra e ataque seu oponente de um lugar de iluminação."
+    },
+    {
+      "name": "lontra",
+      "description": "Quem pode parar o fluxo do riacho? A Arte da Lontra é a Arte do Poder, afastando os avanços do oponente através de golpes sustentados e poderosos."
+    },
+    {
+      "name": "panda",
+      "description": "Seu oponente procura sua complacência, então mostre-a a ele. Amasse-o em um ataque, então desencadeie sua Arte quando ele já tiver cometido seu ataque."
+    },
+    {
+      "name": "raposa",
+      "description": "Assombre seu oponente através de sua Arte, não lhe dê tempo para pensar, menos tempo para agir."
+    },
+    {
+      "name": "rato",
+      "description": "Seu oponente não pode atacar o que não pode prever. Deixe seus movimentos serem imediatos, seus ataques sejam inesperados."
+    },
+    {
+      "name": "zibelina",
+      "description": "Seja fluido e controle o campo de batalha com movimento constante e golpes precisos."
+    },
+    {
+      "name": "serpente marinha",
+      "description": "Não há movimento ou oportunidade desperdiçada. Ataque onde você não é esperado, flua onde seu oponente acredita que você não pode estar."
+    },
+    {
+      "name": "tartaruga",
+      "description": "Dentro de sua esfera de poder, sua Arte permanece suprema. Envolva seu oponente e desvie seus ataques."
+    },
+    {
+      "name": "urso",
+      "description": "Defenda seu terreno. Não siga aqueles tolos que são rápidos em correr para atacar de outra posição. Eles perderam a luta porque já fugiram dela."
+    },
+    {
+      "name": "víbora",
+      "description": "A Arte da Víbora é atacar no Momento. Esta é a verdadeira Arte."
+    },
+    {
+      "name": "morcego",
+      "description": "Não tema o manto da escuridão. Abrace seu anonimato e descubra seu lugar no campo de batalha."
+    },
+    {
+      "name": "águia",
+      "description": "Seja majestosa e voe acima. Ataque com garras de perícia."
+    },
+    {
+      "name": "falcão",
+      "description": "Planeie pelo ar, escondida na névoa até que seja hora de atacar. Sua presa nunca suspeitará de seu ataque rápido."
+    },
+    {
+      "name": "leão",
+      "description": "Sua confiança inspirará medo. Seu orgulho será bem merecido."
+    },
+    {
+      "name": "polvo",
+      "description": "Estenda-se e aproveite todas as oportunidades. Seja flexível para o que pode ser encontrado."
+    },
+    {
+      "name": "rinoceronte",
+      "description": "Carregue para frente com força e prepare uma pele grossa para tudo o que pode desafiar seu passo."
+    },
+    {
+      "name": "escorpião",
+      "description": "Prenda seus inimigos, pique como um ataque venenoso. Envenene sua resolução."
+    },
+    {
+      "name": "aranha",
+      "description": "Arme sua armadilha, espere. O tempo é gentil com aqueles que têm paciência e determinação."
+    },
+    {
+      "name": "cabra",
+      "description": "A estratégia flui da mente. Negue a seus oponentes o pensamento claro através de golpes em sua cabeça e olhos, e sua estratégia falhará, proporcionando a chance de atacar."
+    },
+    {
+      "name": "touro",
+      "description": "Sua Arte vem de seu núcleo; apenas com o estômago nutrido você encontrará a força para conquistar seus adversários."
+    },
+    {
+      "name": "lagosta",
+      "description": "Sua Arte deve ser fluida e precisa, como a convergência do Oceano e do Ar."
+    },
+    {
+      "name": "gato",
+      "description": "A evasão pode levar à vitória tanto quanto a agressão."
+    },
+    {
+      "name": "serau",
+      "description": "Saber quando desviar é a chave para superar obstáculos."
+    },
+    {
+      "name": "ovelha",
+      "description": "Siga os movimentos de seu oponente, sombreie suas formas. A Arte da Ovelha é a arte de saber e de usar os pontos fortes de seu oponente contra suas fraquezas."
+    },
+    {
+      "name": "mejika",
+      "description": "Um espírito gentil é muitas vezes visto como fraqueza, mas não é assim. Mostre a seus inimigos o poder de subestimar a humildade."
+    },
+    {
+      "name": "okija",
+      "description": "Carregue com convicção e ataque com a arma antiga da experiência."
+    },
+    {
+      "name": "sasori",
+      "description": "Ataque rapidamente. Ataque com precisão. Ataque com tanta confiança que seu inimigo enfraquecerá antes que você os tenha tocado."
+    },
+    {
+      "name": "kumo",
+      "description": "Cada movimento deve ser parte de um plano. O oponente não sabe, mas verá quando for pego na derrota."
+    }
+  ]
