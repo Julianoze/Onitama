@@ -8,11 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      backgroundColor: {
+        'card': '#FFFCF9',
+        'cel': '#E8E9E8',
+        'black': '#233640',
+        'blue': '#0A84BF',
+        'red': '#C0091E',
+        'green': '#BFB90A',
       },
+      borderColor: {
+        'cel': '#CCC'
+      },
+      textColor: {
+        'black': '#233640'
+      }
     },
   },
   plugins: [],
