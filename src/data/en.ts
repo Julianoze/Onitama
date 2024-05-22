@@ -113,7 +113,7 @@ const DESCRIPTION : MovementDescription []= [
     "key": "phoenix",
     "name": "phoenix",
     "pokemon": "Ho-Oh",
-    "description": "No opponent expects that which he believes is not there. Harness the shadows, bend the sund, trike as the wind - from a place unseen."
+    "description": "No opponent expects that which he believes is not there. Harness the shadows, bend the sund, trike as the wind from a place unseen."
   },
   {
     "key": "giraffe",
@@ -233,7 +233,7 @@ const DESCRIPTION : MovementDescription []= [
     "key": "scorpion",
     "name": "scorpion",
     "pokemon": "Drapion",
-    "description": "Clamp down your enemies, sting as with a venomous strike. Posson their resolve."
+    "description": "Clamp down your enemies, sting as with a venomous strike. Poison their resolve."
   },
   {
     "key": "spider",
