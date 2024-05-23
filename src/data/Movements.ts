@@ -1250,7 +1250,7 @@ const MOVEMENTS : Movement[] = [
   {
     "from": "way-of-wind",
     "symbol": "犀",
-    "name": "rhinoceros",
+    "name": "rhino",
     "color": "blue",
     "startWith": "red",
     "board": [

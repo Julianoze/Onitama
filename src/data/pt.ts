@@ -224,7 +224,7 @@ const DESCRIPTION : MovementDescription[] = [
     "description": "Estenda-se e aproveite todas as oportunidades. Seja flexível para o que pode ser encontrado."
   },
   {
-    "key": "rhinoceros",
+    "key": "rhino",
     "name": "rinoceronte",
     "pokemon": "Rhyperior",
     "description": "Avance força e prepare uma pele grossa para tudo o que pode desafiar seu passo."

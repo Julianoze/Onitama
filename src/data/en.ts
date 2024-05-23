@@ -224,8 +224,8 @@ const DESCRIPTION : MovementDescription []= [
     "description": "Strecth out and grab every opportunity. Be flexible to what might be found."
   },
   {
-    "key": "rhinoceros",
-    "name": "rhinoceros",
+    "key": "rhino",
+    "name": "rhino",
     "pokemon": "Rhyperior",
     "description": "Charge forward with might and ready a thick skin for all that may challenge your stride."
   },
