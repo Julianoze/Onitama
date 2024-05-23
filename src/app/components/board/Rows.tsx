@@ -3,11 +3,7 @@ import Position from "@/model/Position";
 import Cel from "./Cel";
 import Row from "./Row";
 
-interface RowsProps {
-  movement : Movement;
-  getColor : (position : Position | undefined, index : number) => string;
-}
-function Rows({ movement, getColor } : RowsProps) {
+function rows(movement : Movement, getColor : (position : Position | undefined, index : number) => string) {
 
   let boards : JSX.Element[] = [];
 
@@ -26,14 +22,10 @@ function Rows({ movement, getColor } : RowsProps) {
       tableRows.push(<Row key={index + row}>{tableColumns}</Row>)
     }
 
-    boards.push(<div className="content-center" key={index}>{tableRows}</div>)
+    boards.push(<>{tableRows}</>)
   })
 
-  return (
-    <div>
-      {boards}
-    </div>
-  )
+  return boards;
 }
 
-export default Rows;
+export default rows;

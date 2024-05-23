@@ -2,10 +2,9 @@ import RootCard from "./RootCard";
 import Identification from "../Identification";
 import Label from "../Label";
 import CardProps from "./CardProps";
-import Rows from "../board/Rows";
 import Position from "@/model/Position";
-import Board from "@/model/Board";
 import getCommonColors from "@/utils/Colors";
+import rows from "../board/Rows";
 
 function WayOfWindCard({ movement, description } : CardProps) {
   const getColor = (position : Position | undefined, index : number) =>  {
@@ -35,9 +34,11 @@ function WayOfWindCard({ movement, description } : CardProps) {
                 />
             </div>
         </div>
-        <Rows
-          movement={movement}
-          getColor={getColor}/>
+        <div className="flex flex-col">
+          {rows(movement, getColor).map((x, i) => {
+            return <div className="content-center md:mb-1" key={i}>{x}</div>
+          })}
+        </div>
       </div>
     </RootCard>
   )

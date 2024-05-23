@@ -5,6 +5,7 @@ import CardProps from "./CardProps";
 import Rows from "../board/Rows";
 import Position from "@/model/Position";
 import getCommonColors from "@/utils/Colors";
+import rows from "../board/Rows";
 
 function CommonCard({ movement, description } : CardProps) {
   const getColor = (position : Position | undefined) =>  {
@@ -21,9 +22,11 @@ function CommonCard({ movement, description } : CardProps) {
             name={description.name}
             description={description.description} />
         </div>
-        <Rows
-          movement={movement}
-          getColor={getColor}/>
+        <div className="flex flex-col">
+          {rows(movement, getColor).map((x, i) => {
+            return <div className="content-center md:mb-1" key={i}>{x}</div>
+          })}
+        </div>
       </div>
       <div className="min-h-[40px] hidden sm:block">
         <Label

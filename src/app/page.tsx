@@ -15,7 +15,7 @@ export default function Home() {
         const description = getDescription(x.name);
 
         return (
-          <div className="w-full justify-center" key={i}>
+          <div className="md:flex w-full justify-center" key={i}>
             {
               x.from !== "way-of-wind" ?
               <CommonCard
