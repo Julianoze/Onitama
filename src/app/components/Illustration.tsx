@@ -17,7 +17,7 @@ function Illustration(props: IllustrationProps) {
       </p>
     );
 
-  return <p>pokemon image</p>;
+  return <img src={`img/pokemons/${props.name.toLowerCase()}.png`} />;
 }
 
 export default Illustration;
