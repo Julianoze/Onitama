@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface IllustrationProps {
   className?: string;
   useSymbol: boolean;
@@ -17,7 +19,14 @@ function Illustration(props: IllustrationProps) {
       </p>
     );
 
-  return <img src={`img/pokemons/${props.name.toLowerCase()}.png`} />;
+  return (
+    <Image
+      width={100}
+      height={100}
+      alt="pokemon"
+      src={`/img/pokemons/${props.name.toLowerCase()}.png`}
+    />
+  );
 }
 
 export default Illustration;
