@@ -1,11 +1,14 @@
 interface MovementNameProps {
-  name : string
+  className?: string;
+  name: string;
 }
 
-function MovementName(props : MovementNameProps) {
+function MovementName(props: MovementNameProps) {
   return (
-    <p className="uppercase text-2xl font-bold text-black">{props.name}</p>
-  )
+    <p className={`uppercase font-bold text-black ${props.className}`}>
+      {props.name}
+    </p>
+  );
 }
 
 export default MovementName;
