@@ -31,7 +31,7 @@ function CommonCard({ movement, description }: CardProps) {
             description={description.description}
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-center">
           {rows(movement, getColor).map((x, i) => {
             return (
               <>
