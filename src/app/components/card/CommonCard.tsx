@@ -24,6 +24,7 @@ function CommonCard({ movement, description }: CardProps) {
       <div className="flex">
         <div className="flex justify-center w-[65%]">
           <Identification
+            startWith={movement.startWith}
             symbol={movement.symbol}
             useSymbol={description.useSymbol}
             name={description.name}

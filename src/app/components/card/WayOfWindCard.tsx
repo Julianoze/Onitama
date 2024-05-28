@@ -50,6 +50,7 @@ function LargeView({ description, movement, getColor }: ViewProps) {
         <div className="flex flex-col justify-between content-center pr-3">
           <div className="flex flex-col justify-center h-[65%]">
             <Identification
+              startWith={movement.startWith}
               symbol={movement.symbol}
               useSymbol={description.useSymbol}
               name={description.name}
@@ -89,6 +90,7 @@ function MobileView({ description, movement, getColor }: ViewProps) {
       <div className="flex justify-around w-full">
         <div className="min-w-[90px] flex justify-center">
           <Identification
+            startWith={movement.startWith}
             symbol={movement.symbol}
             useSymbol={description.useSymbol}
             name={description.name}
