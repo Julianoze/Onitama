@@ -22,11 +22,15 @@ function CurrentPlayer(props: CurrentPlayerProps) {
   };
 
   return (
-    <div className={`rotate-${props.movement.startWith} m-1`}>
-      <div className="w-full flex justify-around bg-card border-2 drop-shadow-sm rounded-lg bg-[url('/img/card.png')] bg-no-repeat bg-center p-1 mx-2 my-1 md:w-[500px] min-h-[132p]">
-        <Small />
-        <div className="rotate-[-180deg]">
-          <Small />
+    <div className="flex w-full justify-center">
+      <div className="flex w-fit">
+        <div className={`rotate-${props.movement.startWith} m-1`}>
+          <div className="w-full flex justify-around bg-card border-2 drop-shadow-sm rounded-lg bg-[url('/img/card.png')] bg-no-repeat bg-center p-1 mx-2 my-1 md:w-[500px] min-h-[132p]">
+            <Small />
+            <div className="rotate-[-180deg]">
+              <Small />
+            </div>
+          </div>
         </div>
       </div>
     </div>
