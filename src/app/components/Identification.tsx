@@ -25,7 +25,7 @@ function Identification(props: IdentificationProps) {
         name={props.name}
         useSymbol={props.useSymbol}
       />
-      <MovementName className={props.className} name={props.name} />
+      <MovementName name={props.name} />
     </div>
   );
 }
