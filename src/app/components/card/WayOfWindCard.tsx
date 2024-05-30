@@ -8,16 +8,15 @@ import rows from "../board/Rows";
 import BoardTypeText from "./board/BoardTypeText";
 import Movement from "@/model/Movement";
 import Description from "@/model/Description";
+import { ReactElement } from "react";
 
 interface ViewProps {
   movement: Movement;
   description: Description;
-  getColor: (position: Position | undefined, index: number) => string;
+  rows: ReactElement;
 }
 
 function WayOfWindCard({ movement, description }: CardProps) {
-  // TODO: add translate line 110, 111
-  // TODO: add translate line 121
   function getColor(position: Position | undefined, index: number) {
     if (!position) return "bg-cel";
     if (index > 0)
@@ -27,23 +26,39 @@ function WayOfWindCard({ movement, description }: CardProps) {
 
     return getCommonColors(position, movement);
   }
+
+  const Rows = () => {
+    return (
+      <div className="flex">
+        {rows(movement, getColor).map((x, i) => {
+          return (
+            <div className="flex items-center mx-1" key={i}>
+              <div>{x}</div>
+              <BoardPieceType movement={movement} index={i} />
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
   return (
     <>
       <LargeView
         movement={movement}
         description={description}
-        getColor={getColor}
+        rows={<Rows />}
       />
       <MobileView
         movement={movement}
         description={description}
-        getColor={getColor}
+        rows={<Rows />}
       />
     </>
   );
 }
 
-function LargeView({ description, movement, getColor }: ViewProps) {
+function LargeView({ description, movement, rows }: ViewProps) {
   return (
     <RootCard className="hidden sm:block" key={movement.name}>
       <div className="flex flex-cols p-2">
@@ -67,29 +82,19 @@ function LargeView({ description, movement, getColor }: ViewProps) {
             />
           </div>
         </div>
-        <div className="flex flex-col">
-          {rows(movement, getColor).map((x, i) => {
-            return (
-              <>
-                <div className="flex items-center mb-1" key={i}>
-                  <div>{x}</div>
-                  <BoardPieceType movement={movement} index={i} />
-                </div>
-              </>
-            );
-          })}
-        </div>
+        {rows}
       </div>
     </RootCard>
   );
 }
 
-function MobileView({ description, movement, getColor }: ViewProps) {
+function MobileView({ description, movement, rows }: ViewProps) {
   return (
     <RootCard className="flex md:hidden " key={movement.name}>
       <div className="flex justify-around w-full">
         <div className="min-w-[90px] flex justify-center">
           <Identification
+            className="text-2xl"
             startWith={movement.startWith}
             symbol={movement.symbol}
             useSymbol={description.useSymbol}
@@ -99,18 +104,7 @@ function MobileView({ description, movement, getColor }: ViewProps) {
         </div>
         <div className="flex items-center">
           <div className="flex flex-col">
-            <div className="flex">
-              {rows(movement, getColor).map((x, i) => {
-                return (
-                  <>
-                    <div className="flex items-center mx-1" key={i}>
-                      <div>{x}</div>
-                      <BoardPieceType movement={movement} index={i} />
-                    </div>
-                  </>
-                );
-              })}
-            </div>
+            {rows}
             <p className="text-[8px] text-black text-center m-1">
               Move your student or Master as shown above, then move the Wind
               Spirit as shown below.
