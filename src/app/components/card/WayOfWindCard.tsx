@@ -29,7 +29,7 @@ function WayOfWindCard({ movement, description }: CardProps) {
 
   const Rows = () => {
     return (
-      <div className="flex">
+      <>
         {rows(movement, getColor).map((x, i) => {
           return (
             <div className="flex items-center mx-1" key={i}>
@@ -38,7 +38,7 @@ function WayOfWindCard({ movement, description }: CardProps) {
             </div>
           );
         })}
-      </div>
+      </>
     );
   };
 
@@ -82,7 +82,7 @@ function LargeView({ description, movement, rows }: ViewProps) {
             />
           </div>
         </div>
-        {rows}
+        <div className="flex flex-col">{rows}</div>
       </div>
     </RootCard>
   );
@@ -104,7 +104,7 @@ function MobileView({ description, movement, rows }: ViewProps) {
         </div>
         <div className="flex items-center">
           <div className="flex flex-col">
-            {rows}
+            <div className="flex justify-center">{rows}</div>
             <p className="text-[8px] text-black text-center m-1">
               Move your student or Master as shown above, then move the Wind
               Spirit as shown below.
