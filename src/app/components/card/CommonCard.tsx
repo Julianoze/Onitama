@@ -8,8 +8,6 @@ import rows from "../board/Rows";
 import BoardTypeText from "./board/BoardTypeText";
 
 function CommonCard({ movement, description }: CardProps) {
-  // TODO: add translate line 19
-  // TODO: add translate line 44
   const getColor = (position: Position | undefined) => {
     return getCommonColors(position, movement);
   };
@@ -17,6 +15,27 @@ function CommonCard({ movement, description }: CardProps) {
   const BoardLabel = ({ index }: { index: number }) => {
     if (index !== 0 || movement.board.length <= 1) return <></>;
     return <p className="text-sm text-black font-bold text-center">ou</p>;
+  };
+
+  const Rows = () => {
+    return (
+      <div className="flex flex-col justify-center">
+        {rows(movement, getColor).map((x, i) => {
+          return (
+            <>
+              <div className="flex content-center md:mb-1 items-center" key={i}>
+                <div>{x}</div>
+                <BoardTypeText
+                  boardLength={movement.board.length}
+                  text={i === 0 ? "aluno" : "mestre"}
+                />
+              </div>
+              <BoardLabel index={i} />
+            </>
+          );
+        })}
+      </div>
+    );
   };
 
   return (
@@ -31,25 +50,7 @@ function CommonCard({ movement, description }: CardProps) {
             description={description.description}
           />
         </div>
-        <div className="flex flex-col justify-center">
-          {rows(movement, getColor).map((x, i) => {
-            return (
-              <>
-                <div
-                  className="flex content-center md:mb-1 items-center"
-                  key={i}
-                >
-                  <div>{x}</div>
-                  <BoardTypeText
-                    boardLength={movement.board.length}
-                    text={i === 0 ? "aluno" : "mestre"}
-                  />
-                </div>
-                <BoardLabel index={i} />
-              </>
-            );
-          })}
-        </div>
+        <Rows />
       </div>
       <div className="min-h-[40px] hidden sm:block">
         <Label
