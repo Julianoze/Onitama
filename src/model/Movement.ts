@@ -1,12 +1,13 @@
-import Board from "./Board"
+import Board from "./Board";
+import Player from "./Player";
 
 interface Movement {
-    from: string,
-    symbol: string,
-    name: string,
-    color: "blue" | "green" | "red",
-    startWith: "blue" | "red",
-    board: Board[]
+  from: string;
+  symbol: string;
+  name: string;
+  color: "blue" | "green" | "red";
+  startWith: Player;
+  board: Board[];
 }
 
-export default Movement
+export default Movement;
