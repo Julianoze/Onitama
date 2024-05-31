@@ -106,8 +106,8 @@ function MobileView({ description, movement, rows }: ViewProps) {
           <div className="flex flex-col">
             <div className="flex justify-center">{rows}</div>
             <p className="text-[8px] text-black text-center m-1">
-              Move your student or Master as shown above, then move the Wind
-              Spirit as shown below.
+              Mova o aluno ou mestre como exibido, e então mova o espírito do
+              vento.
             </p>
           </div>
         </div>
