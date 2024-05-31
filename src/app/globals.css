@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   background-color: #233640;
+
+  display: flex;
+  align-items: center;
 }
 
 *,
@@ -89,5 +97,33 @@ body {
     height: calc(100%);
 
     border-radius: 5px;
+  }
+}
+
+.saturate {
+  animation: saturate-animation 2s;
+  animation-fill-mode: forwards;
+}
+
+.desaturate {
+  animation: desaturate-animation 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes saturate-animation {
+  0% {
+    filter: saturate(100%);
+  }
+  100% {
+    filter: saturate(0%);
+  }
+}
+
+@keyframes desaturate-animation {
+  0% {
+    filter: saturate(0%);
+  }
+  100% {
+    filter: saturate(100%);
   }
 }
