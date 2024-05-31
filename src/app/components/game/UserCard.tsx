@@ -5,15 +5,25 @@ import getDescription from "@/handler/Description";
 
 interface UserCardProps {
   movement: Movement;
+  onClick?: (movement: Movement) => void;
 }
 
-function UserCard(props: UserCardProps) {
-  const description = getDescription(props.movement.name);
+function UserCard({ movement, onClick }: UserCardProps) {
+  const description = getDescription(movement.name);
 
-  if (props.movement.from !== "way-of-wind")
-    return <CommonCard movement={props.movement} description={description} />;
-
-  return <WayOfWindCard movement={props.movement} description={description} />;
+  return (
+    <div
+      onClick={() => {
+        onClick?.(movement);
+      }}
+    >
+      {movement.from === "way-of-wind" ? (
+        <WayOfWindCard movement={movement} description={description} />
+      ) : (
+        <CommonCard movement={movement} description={description} />
+      )}
+    </div>
+  );
 }
 
 export default UserCard;
