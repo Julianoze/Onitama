@@ -22,8 +22,8 @@ function CommonCard({ movement, description }: CardProps) {
       <div className="flex flex-col justify-center">
         {rows(movement, getColor).map((x, i) => {
           return (
-            <>
-              <div className="flex content-center md:mb-1 items-center" key={i}>
+            <div key={i}>
+              <div className="flex content-center md:mb-1 items-center">
                 <div>{x}</div>
                 <BoardTypeText
                   boardLength={movement.board.length}
@@ -31,7 +31,7 @@ function CommonCard({ movement, description }: CardProps) {
                 />
               </div>
               <BoardLabel index={i} />
-            </>
+            </div>
           );
         })}
       </div>
