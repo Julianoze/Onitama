@@ -8,59 +8,66 @@ import { consecutiveUniqueRandom } from "unique-random";
 import Movement from "@/model/Movement";
 import Player from "@/model/Player";
 
-enum LastPlay {
+enum Cards {
   Blue = 0 | 1,
   Red = 3 | 4,
+  Next = 2,
 }
 
 function Page() {
   const [loading, setLoading] = useState(true);
   const [nextPlayer, setNextPlayer] = useState<Player>(Player.Red);
-  const [playerCards, setPlayerCards] = useState<Movement[]>([]);
-
-  const [nextCard, setNextCard] = useState<Movement>({} as Movement);
+  const [gameCards, setGameCards] = useState<number[]>([]);
 
   useEffect(() => {
-    const gameMovements: Movement[] = [];
-    const random = consecutiveUniqueRandom(0, 15);
+    const cards: number[] = [];
+    const consecutiveRandom = consecutiveUniqueRandom(0, 15);
+    for (let i = 0; i < 5; ) {
+      const random = consecutiveRandom();
 
-    for (let i = 0; i < 5; i++) {
-      gameMovements.push(MOVEMENTS.filter((x) => x.from === "base")[random()]);
+      if (!cards.includes(random)) {
+        cards.push(random);
+        i++;
+      }
     }
 
-    const next = gameMovements[2];
+    const next = cards[2];
 
-    setNextCard(next);
-    setNextPlayer(next.startWith);
+    setNextPlayer(MOVEMENTS[next].startWith);
 
-    setPlayerCards(gameMovements);
-
+    setGameCards(cards);
     setLoading(false);
   }, []);
 
   if (loading) return <></>;
 
-  const allowedMove = (position: LastPlay) => {
-    if (position <= LastPlay.Blue) return nextPlayer == Player.Red;
+  const allowedMove = (position: Cards) => {
+    if (position <= Cards.Blue) return nextPlayer == Player.Red;
     return nextPlayer == Player.Blue;
   };
 
+  function cloneValue<T>(value: T) {
+    return JSON.parse(JSON.stringify(value)) as T;
+  }
+
   const onClick = (movement: Movement) => {
-    const position = playerCards.indexOf(movement) as LastPlay;
+    const index = MOVEMENTS.indexOf(movement);
+    const position = gameCards.indexOf(index) as Cards;
 
     if (allowedMove(position)) {
       return;
     }
 
-    const card = playerCards[position];
-    setPlayerCards((cards) => {
-      cards[position] = nextCard;
-
-      return cards;
-    });
-
-    setNextCard(card);
     setNextPlayer((x) => (x === Player.Red ? Player.Blue : Player.Red));
+
+    setGameCards((cards) => {
+      const cardsClone = cloneValue<number[]>(cards);
+
+      cardsClone[position] = cloneValue<number>(cards[Cards.Next]);
+      cardsClone[Cards.Next] = cloneValue<number>(index);
+
+      return cardsClone;
+    });
   };
 
   const FieldGame = ({ player }: { player: Player }) => {
@@ -72,8 +79,14 @@ function Page() {
         ${player === Player.Red ? "rotate-[-180deg]" : ""}
         ${nextPlayer === player ? "saturate" : "desaturate"}`}
       >
-        <UserCard onClick={onClick} movement={playerCards[0 + cardId]} />
-        <UserCard onClick={onClick} movement={playerCards[1 + cardId]} />
+        <UserCard
+          onClick={onClick}
+          movement={MOVEMENTS[gameCards[0 + cardId]]}
+        />
+        <UserCard
+          onClick={onClick}
+          movement={MOVEMENTS[gameCards[1 + cardId]]}
+        />
       </div>
     );
   };
@@ -84,7 +97,10 @@ function Page() {
       <div className="bg-green"></div>
       <div className="bg-cyan-700"></div>
       <FieldGame player={Player.Red} />
-      <CurrentPlayer startWith={nextPlayer} movement={nextCard} />
+      <CurrentPlayer
+        startWith={nextPlayer}
+        movement={MOVEMENTS[gameCards[Cards.Next]]}
+      />
       <FieldGame player={Player.Blue} />
     </div>
   );
